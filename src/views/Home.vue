@@ -1,18 +1,5 @@
 <template>
-  <v-container>
-    <h2>Home</h2>
-    <ul>
-      <li>
-        <router-link to="/">Go to Home</router-link>
-      </li>
-      <li>
-        <router-link to="/about">Go to About</router-link>
-      </li>
-      <li>
-        <router-link to="/login">Go to Login</router-link>
-      </li>
-    </ul>
-  </v-container>
+  <v-container> This is home. </v-container>
 </template>
 
 <script>
