@@ -1,30 +1,55 @@
 <template>
-  <v-container>
-    <template>
+  <v-main>
+    <v-container>
       <v-form ref="form" v-model="valid" lazy-validation>
-        <v-text-field
-          v-model="username"
-          :rules="usernameRules"
-          label="Username"
-          required
-        ></v-text-field>
+        <v-row class="pt-8">
+          <v-col sm="12" xl="4" offset-xl="4">
+            <v-card class="pa-4" elevation="2">
+              <v-container>
+                <v-row>
+                  <v-col>
+                    <v-text-field
+                      v-model="username"
+                      :rules="usernameRules"
+                      label="Username"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col>
+                    <v-text-field
+                      type="password"
+                      v-model="password"
+                      :rules="passwordRules"
+                      label="Password"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+              </v-container>
 
-        <v-text-field
-          type="password"
-          v-model="password"
-          :rules="passwordRules"
-          label="Password"
-          required
-        ></v-text-field>
-
-        <v-btn :disabled="!valid" color="success" class="mr-4" @click="submit">
-          Login
-        </v-btn>
-
-        <v-btn color="error" class="mr-4" @click="reset"> Reset </v-btn>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  :disabled="!valid"
+                  color="success"
+                  text
+                  class="mr-4"
+                  @click="submit"
+                >
+                  Login
+                </v-btn>
+                <v-btn color="error" text class="mr-4" @click="reset">
+                  Reset
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-form>
-    </template>
-  </v-container>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
