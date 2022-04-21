@@ -36,14 +36,5 @@
 </template>
 
 <script>
-export default {
-  name: "App",
-
-  data: () => ({
-    showNavbar: false,
-  }),
-  mounted() {
-    console.log(this.$route.name);
-  },
-};
+export default {};
 </script>
